@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.metal.damageslotdisabler.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PlayerEntityMixin",
+    "SlotMixin",
+    "ServerPlayerEntityMixin",
+    "PlayerInventoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "damageslotdisabler",
+	"version": "${version}",
+	"name": "Damage Slot Disabler",
+	"description": "Recibir daño bloquea temporalmente slots del inventario.",
+	"authors": [
+		"Metal"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/damageslotdisabler/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.metal.damageslotdisabler.DamageSlotDisabler"
+		],
+		"client": [
+			"com.metal.damageslotdisabler.client.DamageSlotDisablerClient"
+		]
+	},
+	"mixins": [
+		"damageslotdisabler.mixins.json",
+		{
+			"config": "damageslotdisabler.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
