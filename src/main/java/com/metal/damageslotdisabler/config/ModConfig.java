@@ -25,6 +25,10 @@ public class ModConfig {
         return instance;
     }
 
+    public static void reload() {
+        instance = load();
+    }
+
     public static ModConfig load() {
         if (CONFIG_FILE.exists()) {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {

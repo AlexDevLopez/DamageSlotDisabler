@@ -59,6 +59,15 @@ public class DamageSlotDisabler implements ModInitializer {
                     return 1;
                 })
             );
+
+            dispatcher.register(CommandManager.literal("reloadconfig")
+                .requires(source -> source.hasPermissionLevel(2))
+                .executes(context -> {
+                    ModConfig.reload();
+                    context.getSource().sendFeedback(() -> Text.literal("Configuración recargada exitosamente."), false);
+                    return 1;
+                })
+            );
         });
     }
 }
